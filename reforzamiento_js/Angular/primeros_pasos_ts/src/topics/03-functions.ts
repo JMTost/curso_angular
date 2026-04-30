@@ -13,6 +13,36 @@ function multiply (firstNumber : number, secondNumber? : number , base : number 
     return firstNumber * base;
 }
 
+interface CharacterInterface {
+    name : string,
+    hp : number,
+    showHp : () => void,
+
+}
+
+const healCharacter = (character : CharacterInterface, amount : number) => {
+    character.hp += amount;
+}
+
+const aragon : CharacterInterface = {
+    name : 'Aragon',
+    hp : 50,
+    showHp() {
+        console.log(`Currently you have: ${this.hp}`);
+    },
+}
+
+
+healCharacter(aragon, 20);
+healCharacter(aragon, 20);
+healCharacter(aragon, 20);
+
+
+
+
+aragon.showHp();
+
+
 // funciones que obtienen 
 
 
