@@ -22,4 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-/reforzamiento_js/Angular/primeros_pasos_ts/node_modules/
+/reforzamiento_js/Angular/primeros_pasos_ts/node_modules
+/reforzamiento_js/Angular/bases/node_modules
