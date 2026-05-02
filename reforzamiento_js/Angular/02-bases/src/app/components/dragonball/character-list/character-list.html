@@ -1,0 +1,32 @@
+ <h3>{{listName()}}</h3>
+    <ul>
+      @for(character of characters(); track character.id; let ind = $index){
+        @if (character.power > 100) {
+          <li>
+            {{ind + 1}} -
+            <span>{{ character.name }}</span> -
+            <strong
+            [class.text-danger]="character.power > 9000"
+              [class.text-primary]="character.power < 9000"
+              >({{ character.power }})</strong>
+
+              <!--
+            [ngClass]="powerClass()"
+
+              [class.text-danger]="character.power > 9000"
+              [class.text-info]="character.power < 9000"
+              -->
+
+            <!-- @if (character.power > 9000) {
+              <strong class="text-danger">({{ character.power }})</strong>
+            } @else {
+              <span class="fs-6">({{ character.power }})</span>
+            } -->
+          </li>
+        } @else {
+          <li>
+            <strong>Aquí no hay nadie</strong>
+          </li>
+        }
+      }
+    </ul>

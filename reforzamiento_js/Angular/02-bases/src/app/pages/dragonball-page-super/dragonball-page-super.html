@@ -1,0 +1,19 @@
+<h1>DragonBall Page</h1>
+
+<hr>
+
+<section class="row">
+
+  <div class="col-12 col-sm-6">
+                              <!--? AQUI PASAMOS UN DATO A ESTE COMPONENTE -->
+                                                            <!-- ? EN ESTE MANDAMOS DE ESTE COMPONENTE AL PADRE MEDIANTE UN EVENTO / FUNCIÓN-->
+    <dragonball-character-add [characters]="dragonballService.characters()" (newCharacter)="dragonballService.addCharacter($event)" />
+  </div>
+
+  <div class="col-12 col-sm-6">
+                                <!-- PASO DEL ELEMENTO DESDE EL COMPONENTE PADRE -->
+    <dragonball-character-list  listName="Listado de personajes" [characters]="dragonballService.characters()"></dragonball-character-list>
+
+  </div>
+
+</section>

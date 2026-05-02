@@ -1,0 +1,41 @@
+<style>
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a.active {
+    color: violet;
+  }
+
+  nav a.active:hover {
+    text-decoration: underline;
+    cursor: grab;
+  }
+
+</style>
+
+<nav>
+                                                <!-- ! VALIDACIÓN DEL PATH ACTUAL PARA MOSTRAR EL ESTILO DE CSS -->
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Contador</a>
+
+    <!-- !  Creación de elemento computado de forma dinamica  ! -->
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+
+  <!-- OTROS -->
+
+  <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'">DragonBall</a>
+
+  <a routerLink="/dragonball-super" routerLinkActive="active">DragonBall super</a>
+
+
+</nav>
