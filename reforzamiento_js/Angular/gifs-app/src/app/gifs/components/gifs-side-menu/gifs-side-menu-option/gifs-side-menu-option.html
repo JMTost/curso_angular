@@ -25,6 +25,19 @@
       </div>
     </a>
   }
+   <a [routerLink]="" routerLinkActive="bg-blue-800"  class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
+      <!-- <div>
+        <i [class]="key.title"></i>
+      </div> -->
+      <div class="flex flex-col">
+        <span class="text-lg text-slate-300 fint-bold leading-5">hola</span>
+        <!-- <span class="text-sm text-slate-500 hidden md:block">{{elemento.sublabel}}</span> -->
+      </div>
+    </a>
+  @for (key of element; track $index) {
+  <p>  {{key}}</p>
+
+  }
   <!-- <a href="#"
     class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
     <div>
